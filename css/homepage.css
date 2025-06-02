@@ -7,6 +7,7 @@ html, body {
   background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  filter: brightness(90%)
 }
 
 *,
@@ -23,11 +24,56 @@ html, body {
   padding: 0 20px;
 }
 
+.nav_title {
+  display: flex;
+
+  color: #F2F2F2;
+}
+
 .nav_menu a {
-  color: #000;
-  text-decoration: none; /* по желанию — убирает подчёркивание */
+  color: white;
+  text-decoration: none; 
 }
 
 .nav_menu a:hover {
-  text-decoration: underline; /* можно добавить эффект при наведении */
+  color: red;
+  text-decoration: underline;
+}
+
+.nav_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
+  gap: 15px;
+  margin-top: 150px;
+  list-style: none;
+  font-size: 100px;
+}
+
+.footer {
+  margin-bottom: 10px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+
+  width: 48px;
+  height: 48px;
+  margin-bottom: 107px;
+}
+
+.icons a {
+  color: white;
+  font-size: 48px;
+  transition: 0.3s;
+}
+
+.icons a:hover {
+  color: red;
+  transform: scale(1.2);
 }

@@ -60,7 +60,7 @@
 
             <ul class="tracklist">
               <script>
-                fetch("../js/tracklist.json")
+                fetch("../tracklist.json")
                   .then((res) => res.json())
                   .then((data) => {
                     tracks.push(...data); // или tracks = data, если хочешь заменить

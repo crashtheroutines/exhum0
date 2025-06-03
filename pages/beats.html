@@ -62,10 +62,9 @@
               <script>
                 fetch("../tracklist.json")
                   .then((res) => res.json())
-                  .then((data) => {
-                    tracks.push(...data); // или tracks = data, если хочешь заменить
-                    loadTrack(currentTrack);
-                    renderTracklist();
+                  .then((tracks) => {
+                    // Подставляешь src
+                    audio.src = tracks[0].file;
                   });
               </script>
             </ul>

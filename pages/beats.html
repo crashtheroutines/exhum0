@@ -36,25 +36,70 @@
       <!-- Контент -->
       <main class="content">
         <div class="beat_store"></div>
-          <div class="container"></div>
-            
-        <!-- Подписка -->
-            <div class="subscribe-section">
-              <div class="container">
-                <h3>SUBSCRIBE</h3>
-                <p>
-                  Receive email updates about launches, new product info,
-                  exclusive access, and more.
-                </p>
-                <form class="subscribe-form">
-                  <input
-                    type="email"
-                    placeholder="Enter your email address"
-                    required
-                  />
-                  <button type="submit">Subscribe Now</button>
-                </form>
+        <div class="container">
+          <div class="player">
+            <div class="track-info">
+              <div class="meta">
+                <h4 id="title">Track Title</h4>
+                <span id="duration">0:00</span>
               </div>
+            </div>
+
+            <audio id="audio" preload="metadata"></audio>
+
+            <div class="controls">
+              <button class="ctrl-btn"><i class="fas fa-backward"></i></button>
+              <button class="ctrl-btn play-btn">
+                <i class="fas fa-play"></i>
+              </button>
+              <button class="ctrl-btn"><i class="fas fa-forward"></i></button>
+            </div>
+
+            <div class="progress-container">
+              <input type="range" id="progress" value="0" step="1" />
+            </div>
+
+            <ul class="tracklist">
+              <script>
+                fetch("../js/tracklist.json")
+                  .then((res) => res.json())
+                  .then((data) => {
+                    tracks.push(...data); // или tracks = data, если хочешь заменить
+                    loadTrack(currentTrack);
+                    renderTracklist();
+                  });
+              </script>
+            </ul>
+
+            <div class="purchase-options">
+              <h4>Buy this track:</h4>
+              <button class="buy-btn" data-type="lease">Lease ($9.99)</button>
+              <button class="buy-btn" data-type="exclusive">
+                Exclusive ($99.99)
+              </button>
+              <button class="buy-btn" data-type="unlimited">
+                Unlimited ($29.99)
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="subscribe-section">
+          <div class="container">
+            <h3>SUBSCRIBE</h3>
+            <p>
+              Receive email updates about launches, new product info, exclusive
+              access, and more.
+            </p>
+            <form class="subscribe-form">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                required
+              />
+              <button type="submit">Subscribe Now</button>
+            </form>
+          </div>
+        </div>
       </main>
 
       <!-- Футер -->
@@ -81,5 +126,6 @@
 
     <!-- Скрипты -->
     <script src="scripts/main.js"></script>
+    <script src="../js/audioplayer.js"></script>
   </body>
 </html>

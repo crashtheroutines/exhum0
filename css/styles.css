@@ -1,5 +1,7 @@
 html, body {
   width: 100%;
+  height: 100%;
+  margin: 0;
   overflow-x: hidden;
   background-color:  #f0f0f0;
   box-sizing: border-box;
@@ -18,14 +20,40 @@ html, body {
   padding: 0;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  justify-content: left;
+  margin-top: 35px;
+}
+
 .nav {
-  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #ccc;
 }
 
 .nav_title {
@@ -60,13 +88,7 @@ html, body {
   align-items: center;
   justify-content: center;
   background-color: #f0f0f0;
-}
-
-.content {
-  display: flex;
-  gap: 40px;
-  max-width: 1200px;
-  width: 100%;
+  margin-top: 124px;
 }
 
 .latest-release {
@@ -74,7 +96,7 @@ html, body {
 }
 
 .latest-release h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .latest-release ul {
@@ -98,11 +120,20 @@ html, body {
 .albums-gallery h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: right;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.discography-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
@@ -141,11 +172,10 @@ html, body {
 } */
 
 .album-card .actions {
-  margin-top: 200px;
+  margin-top: 16px;
   margin-right: 25px;
   display: flex;
   justify-content: flex-end;
-  gap: 16px;
 }
 
 .album-card .actions a {
@@ -158,16 +188,21 @@ html, body {
   color: #007bff;
 }
 
+.albums-section .container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
 .library_buttom {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
 
-  position: absolute;
   width: 275px;
   height: 56px;
-  margin-top: 500px;
+  margin-top: 20px;
 }
 
 /* Video */
@@ -209,7 +244,7 @@ html, body {
 /* Subscribe */
 
 .subscribe-section {
-  margin-top: 40px;
+  margin-top: auto;
   text-align: center;
 }
 
@@ -243,6 +278,7 @@ html, body {
   margin-top: 40px;
   text-align: center;
   padding-top: 20px;
+  padding: 10px;
   border-top: 1px solid #ccc;
 }
 

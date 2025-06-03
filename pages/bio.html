@@ -1,83 +1,85 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="description" content="Описание сайта" />
-
     <title>Bio</title>
 
-    <!-- Подключение стилей -->
+    <!-- Стили -->
     <link rel="stylesheet" href="../css/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
-    <!-- Подключение фавиконки (по желанию) -->
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
   </head>
+
   <body>
-    <!-- Хедер -->
-    <header class="header">
-      <div class="container">
-        <nav class="nav">
-          <a href="/" class="logo"></a>
-          <ul class="nav_menu">
-            <li><a href="./music.html">Music</a></li>
-            <li><a href="./beats.html">Beats</a></li>
-            <li><a href="./bio.html">Bio</a></li>
-            <li><a href="./contacts.html">Contacts</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <!-- Главный контент -->
-    <main>
-      
-    
-
-        <!-- Блок подписки -->
-        <div class="subscribe-section">
-          <h3>SUBSCRIBE</h3>
-          <p>
-            Receive email updates about launches, new product info, exclusive
-            access, and more.
-          </p>
-          <form class="subscribe-form">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              required
-            />
-            <button type="submit">Subscribe Now</button>
-          </form>
+    <div class="wrapper">
+      <!-- Хедер -->
+      <header class="header">
+        <div class="container">
+          <nav class="nav">
+            <a href="../index.html" class="logo">exhum0</a>
+            <ul class="nav_menu">
+              <li><a href="./music.html">Music</a></li>
+              <li><a href="./beats.html">Beats</a></li>
+              <li><a href="./bio.html">Bio</a></li>
+              <li><a href="./contacts.html">Contacts</a></li>
+            </ul>
+          </nav>
         </div>
-      </section>
-    </main>
+      </header>
 
-    <!-- Футер -->
-    <footer class="footer">
-      <div class="social-icons">
-        <a href="https://www.youtube.com/@exhum0" target="_blank"
-          ><i class="fab fa-youtube"></i
-        ></a>
-        <a href="https://www.instagram.com/exhum0" target="_blank"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a href="https://soundcloud.com/exhum0" target="_blank"
-          ><i class="fab fa-soundcloud"></i
-        ></a>
-        <a href="https://exhum0.bandcamp.com" target="_blank"
-          ><i class="fab fa-bandcamp"></i
-        ></a>
-      </div>
-      <p>&copy; Copyright 2022, All Rights Reserved by exhum0</p>
-    </footer>
+      <!-- Контент -->
+      <main class="content">
+        <div class="beat_store"></div>
+          <div class="container"></div>
+            
+        <!-- Подписка -->
+            <div class="subscribe-section">
+              <div class="container">
+                <h3>SUBSCRIBE</h3>
+                <p>
+                  Receive email updates about launches, new product info,
+                  exclusive access, and more.
+                </p>
+                <form class="subscribe-form">
+                  <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    required
+                  />
+                  <button type="submit">Subscribe Now</button>
+                </form>
+              </div>
+      </main>
 
-    <!-- Подключение скриптов -->
+      <!-- Футер -->
+      <footer class="footer">
+        <div class="container">
+          <div class="social-icons">
+            <a href="https://www.youtube.com/@exhum0" target="_blank"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="https://www.instagram.com/exhum0" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://soundcloud.com/exhum0" target="_blank"
+              ><i class="fab fa-soundcloud"></i
+            ></a>
+            <a href="https://exhum0.bandcamp.com" target="_blank"
+              ><i class="fab fa-bandcamp"></i
+            ></a>
+          </div>
+          <p>&copy; Copyright 2022, All Rights Reserved by exhum0</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Скрипты -->
     <script src="scripts/main.js"></script>
   </body>
 </html>

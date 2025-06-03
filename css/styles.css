@@ -88,7 +88,7 @@ html, body {
   align-items: center;
   justify-content: center;
   background-color: #f0f0f0;
-  margin-top: 124px;
+  margin-top: 50px;
 }
 
 .latest-release {
@@ -100,6 +100,8 @@ html, body {
 }
 
 .latest-release ul {
+  margin-top: 10px;
+  font-size: 24px;
   list-style-type: disc;
   padding-left: 20px;
 }
@@ -166,10 +168,6 @@ html, body {
   font-size: 0.9rem;
   color: gray;
 }
-
-/* .album-card::before {
-  content: '🛒';
-} */
 
 .album-card .actions {
   margin-top: 16px;

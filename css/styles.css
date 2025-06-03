@@ -128,7 +128,7 @@ html, body {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
+  gap: 20px;
 }
 
 .discography-grid {
@@ -144,7 +144,7 @@ html, body {
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
   overflow: hidden;
   width: 310px;
-  height: 300px;
+  height: 400px;
 }
 
 .album-card img {
@@ -154,11 +154,11 @@ html, body {
 }
 
 .album-card .info {
-  padding: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .album-card .info p {
-  margin: 0;
   font-weight: bold;
 }
 
@@ -176,6 +176,7 @@ html, body {
   margin-right: 25px;
   display: flex;
   justify-content: flex-end;
+  gap: 5px;
 }
 
 .album-card .actions a {

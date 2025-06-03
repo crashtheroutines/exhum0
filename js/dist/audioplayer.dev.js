@@ -72,15 +72,4 @@ function renderTracklist() {
       alert("You selected \"".concat(trackTitle, "\" \u2013 ").concat(type, " license")); // Здесь можно вставить логику оплаты или редиректа
     });
   });
-} // Загружаем треки из JSON
-
-
-fetch("tracks.json").then(function (res) {
-  return res.json();
-}).then(function (data) {
-  tracks = data;
-  loadTrack(currentTrack);
-  renderTracklist();
-})["catch"](function (err) {
-  return console.error("Failed to load tracks:", err);
-});
+}

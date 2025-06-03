@@ -78,13 +78,3 @@ function renderTracklist() {
     });
   });
 }
-
-// Загружаем треки из JSON
-fetch("tracks.json")
-  .then(res => res.json())
-  .then(data => {
-    tracks = data;
-    loadTrack(currentTrack);
-    renderTracklist();
-  })
-  .catch(err => console.error("Failed to load tracks:", err));

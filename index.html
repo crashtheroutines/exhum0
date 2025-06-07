@@ -8,6 +8,27 @@
 
     <title>exhum0 | Music Producer. Guitarist. Beatmaker.</title>
 
+    <script defer>
+      (async function () {
+        try {
+          const res = await fetch("https://api.country.is/");
+          const data = await res.json();
+          const country = data.country.toLowerCase();
+
+          // Список разрешённых стран для английской версии
+          const allowedCountries = ["us", "gb", "ca", "au", "de"];
+
+          if (!allowedCountries.includes(country)) {
+            // Страна не подходит — редиректим на 404
+            window.location.href = "404.html";
+          }
+        } catch (e) {
+          // если не удалось определить IP — тоже на 404
+          window.location.href = "404.html";
+        }
+      })();
+    </script>
+
     <link rel="stylesheet" href="./css/homepage.css" />
 
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />

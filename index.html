@@ -15,8 +15,11 @@
           const data = await res.json();
           const country = data.country.toLowerCase();
 
-          // Список разрешённых стран для английской версии
-          const allowedCountries = ["us", "gb", "ca", "au", "de", "fr"];
+          const blockedCountries = ["ru", "cn", "ir", "kp"];
+
+          if (blockedCountries.includes(country)) {
+            window.location.href = "404.html";
+          }
 
           if (!allowedCountries.includes(country)) {
             // Страна не подходит — редиректим на 404
